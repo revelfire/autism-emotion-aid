@@ -12,11 +12,8 @@ import SceneKit
 import AVKit
 import Vision
 import CoreMLHelpers
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
-class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate { //}, ARSCNViewDelegate {
-
-//    @IBOutlet var sceneView: ARSCNView!
-    
     
     var screenFrameWidth:CGFloat!
     var screenFrameHeight:CGFloat!
@@ -104,27 +101,16 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         setupLabel()
         setupFeedbackView()
         
-//        // Set the view's delegate
-//        sceneView.delegate = self
-//
-//        // Show statistics such as fps and timing information
-//        sceneView.showsStatistics = true
-//
-//        // Create a new scene
-//        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-//
-//        // Set the scene to the view
-//        sceneView.scene = scene
     }
     
     //TODO:
     /**
-        1. Modify the image capture to identify a face and get bounding box
-        2. Modify the ML processor to use emotion detection alg
-        3. Pass the image capture by slicing the "box" and passing to the alg
-        4. Annotate the face with the identified emotion
-        5. Tie the labeling of the face/emotion to the spatial location of the face
- 
+        DONE 1. Modify the image capture to identify a face and get bounding box
+        DONE 2. Modify the ML processor to use emotion detection alg
+        DONE 3. Pass the image capture by slicing the "box" and passing to the alg
+        DONE 4. Annotate the face with the identified emotion
+        DONE 5. Tie the labeling of the face/emotion to the spatial location of the face
+        6. Debounce the detector
     **/
     
     
@@ -155,33 +141,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         }
     }
     
-    var frameIdx = 0
-    
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
 //        print("camerea was able to capture a frame", Date())
         
-        
-        
-        /***
-         let ratio = image.size.width / image.size.height
-         if containerView.frame.width > containerView.frame.height {
-         let newHeight = containerView.frame.width / ratio
-         imageView.frame.size = CGSize(width: containerView.frame.width, height: newHeight)
-         }
-         else{
-         let newWidth = containerView.frame.height * ratio
-         imageView.frame.size = CGSize(width: newWidth, height: containerView.frame.height)
-         }
- **/
-        
-//        if (frameIdx % 10 == 0) {
-            //Probably a very hacky way to cut back on frame rate here.
-            //
-//            print("callback for video capture delegate invoked. frame: \(frameIdx)")
-            handle(buffer: sampleBuffer)
-//        }
-//        frameIdx += 1
-        
+        handle(buffer: sampleBuffer)
     }
     
     func handle(buffer: CMSampleBuffer) {
@@ -199,7 +162,37 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         makeFaceDetectionRequest(pixelBuffer: pixelBuffer)
     }
     
+    //TODO: Implement short-term-memory voting algorithm.
+    class Prediction {
+        var previous:String = ""
+//        var previousPrevious:String = ""
+        var last:String = ""
+        
+        func getPrediction(_ pred: String) -> String {
+            
+            var predictionResponse = ""
+            
+            if pred == last { //2 in a row, go for it
+                predictionResponse = pred
+            } else if pred == previous {
+                predictionResponse = pred
+            } else if (pred != last && last == previous) {
+                predictionResponse = last
+            }
+//            previousPrevious = previous
+            previous = last
+            last = pred
+            
+            return predictionResponse
+            
+        }
+    }
     
+    let prediction:Prediction = Prediction()
+    
+    func debouncePrediction(_ pred: String) -> String {
+        return prediction.getPrediction(pred)
+    }
     
     let ciContext = CIContext()
     
@@ -298,7 +291,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                         
                         DispatchQueue.main.async(execute: {
                             self.feedbackView.image = UIImage(ciImage: CIImage(cvPixelBuffer: facePixelBuffer))
-                            self.label.text = "\(firstObservation.identifier)"
+                            self.label.text = "\(self.prediction.getPrediction(firstObservation.identifier))"
                         })
                         self.isRunningEmotionQuery = false
                         
@@ -330,64 +323,18 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
     }
     
-//    var redView:UIView!
-//
-//    func updateFaceBox(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
-//        if (redView == nil) {
-//            redView = UIView()
-//            redView.backgroundColor = .red
-//            redView.alpha = 0.4
-//            self.view.addSubview(redView)
-//        } else {
-//            redView.frame = CGRect(x: x, y: y, width: width, height: height)
-//        }
-//    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-//        // Create a session configuration
-//        let configuration = ARWorldTrackingConfiguration()
-//
-//        // Run the view's session
-//        sceneView.session.run(configuration)
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-//        // Pause the view's session
-//        sceneView.session.pause()
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
     }
 
-    // MARK: - ARSCNViewDelegate
-    
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
-    }
-*/
-    
-//    func session(_ session: ARSession, didFailWithError error: Error) {
-//        // Present an error message to the user
-//        
-//    }
-//    
-//    func sessionWasInterrupted(_ session: ARSession) {
-//        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-//        
-//    }
-//    
-//    func sessionInterruptionEnded(_ session: ARSession) {
-//        // Reset tracking and/or remove existing anchors if consistent tracking is required
-//        
-//    }
 }
