@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0104DDC6780644408CD83D74 /* Pods_Emotism.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8AF15EF22F1516AB379F0A /* Pods_Emotism.framework */; };
+		FA4C8AB0210CB2B2000A3D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C8AAF210CB2B2000A3D14 /* AppDelegate.swift */; };
+		FA4C8AB2210CB2B2000A3D14 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4C8AB1210CB2B2000A3D14 /* art.scnassets */; };
+		FA4C8AB4210CB2B2000A3D14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C8AB3210CB2B2000A3D14 /* ViewController.swift */; };
+		FA4C8AB7210CB2B2000A3D14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4C8AB5210CB2B2000A3D14 /* Main.storyboard */; };
+		FA4C8AB9210CB2B3000A3D14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4C8AB8210CB2B3000A3D14 /* Assets.xcassets */; };
+		FA4C8ABC210CB2B3000A3D14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4C8ABA210CB2B3000A3D14 /* LaunchScreen.storyboard */; };
+		FA4C8AC7210CB2B3000A3D14 /* EmotismTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C8AC6210CB2B3000A3D14 /* EmotismTests.swift */; };
+		FA4C8AD3210CBFA6000A3D14 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FA4C8AD2210CBFA6000A3D14 /* SqueezeNet.mlmodel */; };
+		FA4C8AE1210E2F52000A3D14 /* harshsikka.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FA4C8ADC210E2F52000A3D14 /* harshsikka.pdf */; };
+		FA4C8AE3210E2F52000A3D14 /* fer2013_mini_XCEPTION.102-0.66.hdf5 in Resources */ = {isa = PBXBuildFile; fileRef = FA4C8ADE210E2F52000A3D14 /* fer2013_mini_XCEPTION.102-0.66.hdf5 */; };
+		FA4C8AE4210E2F52000A3D14 /* LeviHassner_ICMI15.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FA4C8AE0210E2F52000A3D14 /* LeviHassner_ICMI15.pdf */; };
+		FA4C8AF3210E35B1000A3D14 /* fer2013_big_XCEPTION.54-0.66.hdf5 in Resources */ = {isa = PBXBuildFile; fileRef = FA4C8AF0210E35B1000A3D14 /* fer2013_big_XCEPTION.54-0.66.hdf5 */; };
+		FA4C8AF4210E35B1000A3D14 /* harshsikka_mini.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FA4C8AF1210E35B1000A3D14 /* harshsikka_mini.mlmodel */; };
+		FA4C8AF5210E35B1000A3D14 /* convert_keras_to_coreml.py in Resources */ = {isa = PBXBuildFile; fileRef = FA4C8AF2210E35B1000A3D14 /* convert_keras_to_coreml.py */; };
+		FA4C8AF7210E3763000A3D14 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FA4C8AF6210E3762000A3D14 /* Podfile */; };
+		FA74FD0C211F556D00F0F069 /* harshsikka_big.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FA74FD0B211F556D00F0F069 /* harshsikka_big.mlmodel */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA4C8AC3210CB2B3000A3D14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA4C8AA4210CB2B2000A3D14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA4C8AAB210CB2B2000A3D14;
+			remoteInfo = Emotism;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A26B1A226B012B352C0D71F /* Pods-Emotism.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emotism.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emotism/Pods-Emotism.debug.xcconfig"; sourceTree = "<group>"; };
+		65BD5735F34AC58AFF7467F6 /* Pods-Emotism.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emotism.release.xcconfig"; path = "Pods/Target Support Files/Pods-Emotism/Pods-Emotism.release.xcconfig"; sourceTree = "<group>"; };
+		9C8AF15EF22F1516AB379F0A /* Pods_Emotism.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emotism.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA4C8AAC210CB2B2000A3D14 /* Emotism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emotism.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA4C8AAF210CB2B2000A3D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA4C8AB1210CB2B2000A3D14 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		FA4C8AB3210CB2B2000A3D14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA4C8AB6210CB2B2000A3D14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA4C8AB8210CB2B3000A3D14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA4C8ABB210CB2B3000A3D14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA4C8ABD210CB2B3000A3D14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA4C8AC2210CB2B3000A3D14 /* EmotismTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotismTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA4C8AC6210CB2B3000A3D14 /* EmotismTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotismTests.swift; sourceTree = "<group>"; };
+		FA4C8AC8210CB2B3000A3D14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA4C8AD2210CBFA6000A3D14 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
+		FA4C8AD4210E239C000A3D14 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FA4C8ADC210E2F52000A3D14 /* harshsikka.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = harshsikka.pdf; sourceTree = "<group>"; };
+		FA4C8ADE210E2F52000A3D14 /* fer2013_mini_XCEPTION.102-0.66.hdf5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fer2013_mini_XCEPTION.102-0.66.hdf5"; sourceTree = "<group>"; };
+		FA4C8AE0210E2F52000A3D14 /* LeviHassner_ICMI15.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LeviHassner_ICMI15.pdf; sourceTree = "<group>"; };
+		FA4C8AF0210E35B1000A3D14 /* fer2013_big_XCEPTION.54-0.66.hdf5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fer2013_big_XCEPTION.54-0.66.hdf5"; sourceTree = "<group>"; };
+		FA4C8AF1210E35B1000A3D14 /* harshsikka_mini.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = harshsikka_mini.mlmodel; sourceTree = "<group>"; };
+		FA4C8AF2210E35B1000A3D14 /* convert_keras_to_coreml.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert_keras_to_coreml.py; sourceTree = "<group>"; };
+		FA4C8AF6210E3762000A3D14 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		FA74FD0B211F556D00F0F069 /* harshsikka_big.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = harshsikka_big.mlmodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA4C8AA9210CB2B2000A3D14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0104DDC6780644408CD83D74 /* Pods_Emotism.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA4C8ABF210CB2B3000A3D14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABC46E6C0FE03A752AE82DD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A26B1A226B012B352C0D71F /* Pods-Emotism.debug.xcconfig */,
+				65BD5735F34AC58AFF7467F6 /* Pods-Emotism.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AEAD8159CE97A25A72B0AC91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C8AF15EF22F1516AB379F0A /* Pods_Emotism.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA223945210E38940029C819 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C8AB3210CB2B2000A3D14 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA223946210E38A30029C819 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C8AAF210CB2B2000A3D14 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FA223947210E38D30029C819 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C8AB5210CB2B2000A3D14 /* Main.storyboard */,
+				FA4C8ABA210CB2B3000A3D14 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA4C8AA3210CB2B2000A3D14 = {
+			isa = PBXGroup;
+			children = (
+				FA4C8AF6210E3762000A3D14 /* Podfile */,
+				FA4C8AAE210CB2B2000A3D14 /* Emotism */,
+				FA4C8AC5210CB2B3000A3D14 /* EmotismTests */,
+				FA4C8AAD210CB2B2000A3D14 /* Products */,
+				ABC46E6C0FE03A752AE82DD1 /* Pods */,
+				AEAD8159CE97A25A72B0AC91 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA4C8AAD210CB2B2000A3D14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C8AAC210CB2B2000A3D14 /* Emotism.app */,
+				FA4C8AC2210CB2B3000A3D14 /* EmotismTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA4C8AAE210CB2B2000A3D14 /* Emotism */ = {
+			isa = PBXGroup;
+			children = (
+				FA223947210E38D30029C819 /* Storyboards */,
+				FA223946210E38A30029C819 /* AppDelegate */,
+				FA223945210E38940029C819 /* ViewControllers */,
+				FA4C8AD5210E2BC8000A3D14 /* resources */,
+				FA4C8ABD210CB2B3000A3D14 /* Info.plist */,
+				FA4C8AD4210E239C000A3D14 /* README.md */,
+			);
+			path = Emotism;
+			sourceTree = "<group>";
+		};
+		FA4C8AC5210CB2B3000A3D14 /* EmotismTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C8AC6210CB2B3000A3D14 /* EmotismTests.swift */,
+				FA4C8AC8210CB2B3000A3D14 /* Info.plist */,
+			);
+			path = EmotismTests;
+			sourceTree = "<group>";
+		};
+		FA4C8AD1210CBF96000A3D14 /* obj.detection.model */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C8AD2210CBFA6000A3D14 /* SqueezeNet.mlmodel */,
+			);
+			path = obj.detection.model;
+			sourceTree = "<group>";
+		};
+		FA4C8AD5210E2BC8000A3D14 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C8AD1210CBF96000A3D14 /* obj.detection.model */,
+				FA4C8ADB210E2F52000A3D14 /* harshsikka */,
+				FA4C8ADF210E2F52000A3D14 /* levihassner */,
+				FA4C8AB8210CB2B3000A3D14 /* Assets.xcassets */,
+				FA4C8AB1210CB2B2000A3D14 /* art.scnassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		FA4C8ADB210E2F52000A3D14 /* harshsikka */ = {
+			isa = PBXGroup;
+			children = (
+				FA74FD0B211F556D00F0F069 /* harshsikka_big.mlmodel */,
+				FA4C8AF2210E35B1000A3D14 /* convert_keras_to_coreml.py */,
+				FA4C8AF0210E35B1000A3D14 /* fer2013_big_XCEPTION.54-0.66.hdf5 */,
+				FA4C8AF1210E35B1000A3D14 /* harshsikka_mini.mlmodel */,
+				FA4C8ADC210E2F52000A3D14 /* harshsikka.pdf */,
+				FA4C8ADE210E2F52000A3D14 /* fer2013_mini_XCEPTION.102-0.66.hdf5 */,
+			);
+			path = harshsikka;
+			sourceTree = "<group>";
+		};
+		FA4C8ADF210E2F52000A3D14 /* levihassner */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C8AE0210E2F52000A3D14 /* LeviHassner_ICMI15.pdf */,
+			);
+			path = levihassner;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA4C8AAB210CB2B2000A3D14 /* Emotism */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA4C8ACB210CB2B3000A3D14 /* Build configuration list for PBXNativeTarget "Emotism" */;
+			buildPhases = (
+				F9F3E033E4F902E494016266 /* [CP] Check Pods Manifest.lock */,
+				FA4C8AA8210CB2B2000A3D14 /* Sources */,
+				FA4C8AA9210CB2B2000A3D14 /* Frameworks */,
+				FA4C8AAA210CB2B2000A3D14 /* Resources */,
+				070D0B1D273916BDF30A7BF7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Emotism;
+			productName = Emotism;
+			productReference = FA4C8AAC210CB2B2000A3D14 /* Emotism.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA4C8AC1210CB2B3000A3D14 /* EmotismTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA4C8ACE210CB2B3000A3D14 /* Build configuration list for PBXNativeTarget "EmotismTests" */;
+			buildPhases = (
+				FA4C8ABE210CB2B3000A3D14 /* Sources */,
+				FA4C8ABF210CB2B3000A3D14 /* Frameworks */,
+				FA4C8AC0210CB2B3000A3D14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA4C8AC4210CB2B3000A3D14 /* PBXTargetDependency */,
+			);
+			name = EmotismTests;
+			productName = EmotismTests;
+			productReference = FA4C8AC2210CB2B3000A3D14 /* EmotismTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA4C8AA4210CB2B2000A3D14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = SolipsAR;
+				TargetAttributes = {
+					FA4C8AAB210CB2B2000A3D14 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					FA4C8AC1210CB2B3000A3D14 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = FA4C8AAB210CB2B2000A3D14;
+					};
+				};
+			};
+			buildConfigurationList = FA4C8AA7210CB2B2000A3D14 /* Build configuration list for PBXProject "Emotism" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA4C8AA3210CB2B2000A3D14;
+			productRefGroup = FA4C8AAD210CB2B2000A3D14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA4C8AAB210CB2B2000A3D14 /* Emotism */,
+				FA4C8AC1210CB2B3000A3D14 /* EmotismTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA4C8AAA210CB2B2000A3D14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA4C8AF7210E3763000A3D14 /* Podfile in Resources */,
+				FA4C8AB2210CB2B2000A3D14 /* art.scnassets in Resources */,
+				FA4C8ABC210CB2B3000A3D14 /* LaunchScreen.storyboard in Resources */,
+				FA4C8AE1210E2F52000A3D14 /* harshsikka.pdf in Resources */,
+				FA4C8AF3210E35B1000A3D14 /* fer2013_big_XCEPTION.54-0.66.hdf5 in Resources */,
+				FA4C8AE4210E2F52000A3D14 /* LeviHassner_ICMI15.pdf in Resources */,
+				FA4C8AB9210CB2B3000A3D14 /* Assets.xcassets in Resources */,
+				FA4C8AE3210E2F52000A3D14 /* fer2013_mini_XCEPTION.102-0.66.hdf5 in Resources */,
+				FA4C8AF5210E35B1000A3D14 /* convert_keras_to_coreml.py in Resources */,
+				FA4C8AB7210CB2B2000A3D14 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA4C8AC0210CB2B3000A3D14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		070D0B1D273916BDF30A7BF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Emotism/Pods-Emotism-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CoreMLHelpers/CoreMLHelpers.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreMLHelpers.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Emotism/Pods-Emotism-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9F3E033E4F902E494016266 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Emotism-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA4C8AA8210CB2B2000A3D14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA4C8AB4210CB2B2000A3D14 /* ViewController.swift in Sources */,
+				FA74FD0C211F556D00F0F069 /* harshsikka_big.mlmodel in Sources */,
+				FA4C8AD3210CBFA6000A3D14 /* SqueezeNet.mlmodel in Sources */,
+				FA4C8AB0210CB2B2000A3D14 /* AppDelegate.swift in Sources */,
+				FA4C8AF4210E35B1000A3D14 /* harshsikka_mini.mlmodel in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA4C8ABE210CB2B3000A3D14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA4C8AC7210CB2B3000A3D14 /* EmotismTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA4C8AC4210CB2B3000A3D14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA4C8AAB210CB2B2000A3D14 /* Emotism */;
+			targetProxy = FA4C8AC3210CB2B3000A3D14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA4C8AB5210CB2B2000A3D14 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA4C8AB6210CB2B2000A3D14 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA4C8ABA210CB2B3000A3D14 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA4C8ABB210CB2B3000A3D14 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA4C8AC9210CB2B3000A3D14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA4C8ACA210CB2B3000A3D14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA4C8ACC210CB2B3000A3D14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A26B1A226B012B352C0D71F /* Pods-Emotism.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VJE3C6YHLD;
+				INFOPLIST_FILE = Emotism/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spillwave.ar.Emotism;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA4C8ACD210CB2B3000A3D14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65BD5735F34AC58AFF7467F6 /* Pods-Emotism.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VJE3C6YHLD;
+				INFOPLIST_FILE = Emotism/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spillwave.ar.Emotism;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA4C8ACF210CB2B3000A3D14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VJE3C6YHLD;
+				INFOPLIST_FILE = EmotismTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spillwave.ar.EmotismTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emotism.app/Emotism";
+			};
+			name = Debug;
+		};
+		FA4C8AD0210CB2B3000A3D14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VJE3C6YHLD;
+				INFOPLIST_FILE = EmotismTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spillwave.ar.EmotismTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emotism.app/Emotism";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA4C8AA7210CB2B2000A3D14 /* Build configuration list for PBXProject "Emotism" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA4C8AC9210CB2B3000A3D14 /* Debug */,
+				FA4C8ACA210CB2B3000A3D14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA4C8ACB210CB2B3000A3D14 /* Build configuration list for PBXNativeTarget "Emotism" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA4C8ACC210CB2B3000A3D14 /* Debug */,
+				FA4C8ACD210CB2B3000A3D14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA4C8ACE210CB2B3000A3D14 /* Build configuration list for PBXNativeTarget "EmotismTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA4C8ACF210CB2B3000A3D14 /* Debug */,
+				FA4C8AD0210CB2B3000A3D14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA4C8AA4210CB2B2000A3D14 /* Project object */;
+}
